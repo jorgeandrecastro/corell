@@ -13,11 +13,11 @@
 
 `corell` est conçu pour un seul impératif : **aucun octet ne quitte votre machine**.
 
-Dans les environnements où la souveraineté des données est non négociable — dossiers médicaux, documents juridiques, propriété intellectuelle industrielle — les solutions cloud ne sont pas une option. `corell` abstrait la plomberie d'inférence locale via [Ollama](https://ollama.com) et sécurise la persistance d'état via un moteur Key-Value embarqué ([sled](https://github.com/spacejam/sled)), le tout sans aucune dépendance réseau externe.
+Dans les environnements où la souveraineté des données est non négociable  dossiers médicaux, documents juridiques, propriété intellectuelle industrielle  les solutions cloud ne sont pas une option. `corell` abstrait la plomberie d'inférence locale via [Ollama](https://ollama.com) et sécurise la persistance d'état via un moteur Key-Value embarqué ([sled](https://github.com/spacejam/sled)), le tout sans aucune dépendance réseau externe.
 
 **Trois garanties fondamentales :**
 
-- **Zéro réseau** — Conçu pour des environnements air-gapped. Aucune télémétrie, aucun appel sortant.
+- **Zéro réseau** : Conçu pour des environnements air-gapped. Aucune télémétrie, aucun appel sortant.
 - **Agnosticisme modèle** : Basculez de `llama3.2` à `deepseek-r1:8b` ou tout modèle Ollama via une simple chaîne de caractères.
 - **Bien commun** : Licencié GPL-2.0-or-later. Immuablement libre.
 
@@ -183,7 +183,7 @@ Tout modèle compatible Ollama fonctionne : passez simplement son identifiant à
 
 ## Feuille de route
 
-- [ ] `new_with_host(model, host, port, path)` — Ollama sur hôte ou port personnalisé
+- [ ] `new_with_host(model, host, port, path)` : Ollama sur hôte ou port personnalisé
 - [ ] Templates de prompt configurables (Alpaca, ChatML, Llama-3)
 - [ ] Gestion du contexte conversationnel multi-tours
 - [ ] Suppression de clé dans le stockage (`delete_data`)
