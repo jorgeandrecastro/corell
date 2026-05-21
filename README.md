@@ -181,16 +181,6 @@ Tout modèle compatible Ollama fonctionne : passez simplement son identifiant à
 
 ---
 
-## Feuille de route
-
-- [ ] `new_with_host(model, host, port, path)` : Ollama sur hôte ou port personnalisé
-- [ ] Templates de prompt configurables (Alpaca, ChatML, Llama-3)
-- [ ] Gestion du contexte conversationnel multi-tours
-- [ ] Suppression de clé dans le stockage (`delete_data`)
-- [ ] Chiffrement optionnel du stockage sled (via `age`)
-
----
-
 ## Contribution
 
 Les contributions sont les bienvenues. Ce projet suit les principes du logiciel libre.
