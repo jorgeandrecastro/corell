@@ -1,0 +1,38 @@
+[package]
+name          = "corell"
+version       = "0.1.0"
+edition       = "2024"
+authors       = ["Jorge Andre Castro <georgeandrec@gmail.com>"]
+license       = "GPL-2.0-or-later"
+description   = "Un kernel d'inférence IA universel, asynchrone, agnostique et local-first (0 réseau) en Rust."
+repository    = "https://github.com/jorgeandrecastro/corell"
+documentation = "https://docs.rs/corell"
+readme        = "README.md"
+keywords      = ["ai", "kernel", "ollama", "local-first", "privacy"]
+categories    = ["asynchronous", "science", "database-implementations"]
+rust-version = "1.85"
+
+# Contrôle total : on ne compile AUTOMATIQUEMENT que la lib
+autolib      = true
+autobins     = false
+autoexamples = false
+autotests    = false
+autobenches  = false
+
+[lib]
+name = "corell"
+path = "src/lib.rs"
+
+[dependencies]
+tokio = { version = "1.52", features = ["full"] }
+ollama-rs = { version = "0.3", default-features = false, features = ["rustls","stream"] }
+sled = "0.34"
+thiserror = "2.0"
+tokio-stream = "0.1"
+
+[profile.release]
+opt-level     = "z"
+lto           = true
+codegen-units = 1
+panic         = "abort"
+strip         = true
